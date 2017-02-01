@@ -29,7 +29,7 @@ public class PlayGameActivity extends ActionBarActivity {
     int counter;
     MediaPlayer mp = new MediaPlayer();
 
-
+//Hejsan Pontus
     //http://stackoverflow.com/questions/6945678/storing-r-drawable-ids-in-xml-array
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
