@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_style"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/sound_header"
+        android:gravity="center"
+        android:id="@+id/soundText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ADADAC"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/media_text"
+        android:id="@+id/mediaText"
+        android:layout_below="@+id/soundText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/mediaText2"
+        android:layout_below="@+id/mediaText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal" />
+
+    <SeekBar
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/mediaText2"
+        android:layout_centerHorizontal="true"
+        android:max="20"
+        android:progress="10"
+        android:layout_marginTop="10dp" />
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/r_button_effects"
+        android:id="@+id/effectRadio"
+        android:checked="true"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_marginTop="8dp"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/r_button_effects"
+        android:id="@+id/backRadio"
+        android:checked="true"
+        android:layout_below="@+id/effectRadio"
+        android:layout_alignLeft="@+id/effectRadio"
+        android:layout_alignStart="@+id/effectRadio"
+        android:layout_marginTop="8dp"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/backRadio">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_weight="0.5"
+            android:id="@+id/cancelButton"
+            android:background="@drawable/button_dialog_colors"
+            android:layout_margin="7dp"
+            android:onClick="cancelClick"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok"
+            android:layout_weight="0.5"
+            android:id="@+id/okButton"
+            android:background="@drawable/button_dialog_colors"
+            android:layout_margin="7dp"
+            android:onClick="okClick"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>

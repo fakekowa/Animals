@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <string name="app_name">GuessAnimalApp</string>
+    <string name="the_app_name">Animal Sound</string>
+    <string name="action_settings">Inställningar</string>
+    <string name="menu_start">STARTA</string>
+    <string name="menu_library">BIBLIOTEK</string>
+    <string name="menu_extras">EXTRA</string>
+    <string name="title_activity_dialog_window">DialogWindow</string>
+    <string name="lang_settings">Språkinställningar</string>
+    <string name="sound_settings">Ljudinställningar</string>
+    <string name="help_settings">Hjälp</string>
+    <string name="english_lang">Engelska</string>
+    <string name="swedish_lang">Svenska</string>
+    <string name="title_activity_lang">LangActivity</string>
+    <string name="lang_choose">Välj språk</string>
+    <string name="media_text">Ljudvolym</string>
+
+    <string name="easy_play">LÄTT</string>
+    <string name="medium_play">MEDIUM</string>
+    <string name="hard_play">SVÅRT</string>
+
+    <string name="sound_header">Ljudinställningar</string>
+    <string name="r_button_effects">Ljudeffekter</string>
+    <string name="r_button_backg">Bakgrundsljud</string>
+    <string name="title_activity_sound">SoundActivity</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="cancel_button">Avbryt</string>
+    <string name="ok_button">OK</string>
+    <string name="title_activity_start_play">StartPlayActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="play_sound_button">Spela ljudet!</string>
+    <string name="elephant_desc">En elefant är ett djur</string>
+    <string name="cow_desc">En ko är ett djur</string>
+    <string name="lion_desc">Ett lejon är ett djur</string>
+    <string name="catmeow_desc">En louisekatt är ett djur</string>
+    <string name="sealion_desc">Ett sjölejon är ett djur</string>
+    <string name="cat_desc">En katt är ett djur</string>
+    <string name="next_game">Nästa spel!</string>
+
+    <string name="elephant_title">Elefant</string>
+    <string name="cow_title">Ko</string>
+    <string name="lion_title">Lejon</string>
+    <string name="catmeow_title">Louise Katt</string>
+    <string name="sealion_title">Sjölejon</string>
+    <string name="cat_title">Katt</string>
+
+</resources>

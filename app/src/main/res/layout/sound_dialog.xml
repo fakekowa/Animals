@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/sound_header"
+        android:gravity="center"
+        android:id="@+id/soundText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/media_text"
+        android:id="@+id/mediaText"
+        android:layout_below="@+id/soundText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/mediaText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound Effects"
+        android:id="@+id/effectRadio"
+        android:checked="true"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_marginTop="10dp"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background Sound"
+        android:id="@+id/backRadio"
+        android:checked="true"
+        android:layout_below="@+id/effectRadio"
+        android:layout_alignLeft="@+id/effectRadio"
+        android:layout_alignStart="@+id/effectRadio"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
+

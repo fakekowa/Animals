@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/language_settings"
+        android:title="@string/lang_settings"
+        android:actionLayout="@layout/language_dialog"
+        android:icon="@drawable/flageng" />
+
+    <item
+        android:id="@+id/sound_settings"
+        android:title="@string/sound_settings"
+        android:actionLayout="@layout/sound_dialog"/>
+
+    <item
+        android:id="@+id/help_settings"
+        android:title="@string/help_settings"
+        android:actionLayout="@layout/help_dialog"/>
+
+</menu>

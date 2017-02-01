@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="random_imgs">
+        <item>@drawable/elephant</item>
+        <item>@drawable/cow</item>
+        <item>@drawable/lion</item>
+        <item>@drawable/louise</item>
+        <item>@drawable/sealion</item>
+        <item>@drawable/cat</item>
+    </integer-array>
+
+    <integer-array name="random_sound">
+        <item>@raw/elephant</item>
+        <item>@raw/cow</item>
+        <item>@raw/lion</item>
+        <item>@raw/catmeow</item>
+        <item>@raw/sealion</item>
+        <item>@raw/cat</item>
+    </integer-array>
+
+    <integer-array name="random_title">
+        <item>@string/elephant_title</item>
+        <item>@string/cow_title</item>
+        <item>@string/lion_title</item>
+        <item>@string/catmeow_title</item>
+        <item>@string/sealion_title</item>
+        <item>@string/cat_title</item>
+    </integer-array>
+
+    <integer-array name="random_text">
+        <item>@string/elephant_desc</item>
+        <item>@string/cow_desc</item>
+        <item>@string/lion_desc</item>
+        <item>@string/catmeow_desc</item>
+        <item>@string/sealion_desc</item>
+        <item>@string/cat_desc</item>
+    </integer-array>
+
+    <integer-array name="button_imgs">
+        <item>@id/imageButton1</item>
+        <item>@id/imageButton2</item>
+        <item>@id/imageButton3</item>
+        <item>@id/imageButton4</item>
+    </integer-array>
+
+</resources>
