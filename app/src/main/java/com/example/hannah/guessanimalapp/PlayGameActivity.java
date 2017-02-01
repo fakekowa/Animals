@@ -1,27 +1,24 @@
 package com.example.hannah.guessanimalapp;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class PlayGameActivity extends ActionBarActivity {
+public class PlayGameActivity extends AppCompatActivity {
 
     Button playButton;
     int ranNum;
@@ -64,7 +61,7 @@ public class PlayGameActivity extends ActionBarActivity {
             ImageButton img = (ImageButton) findViewById(buttonImgs.getResourceId(i, -1));
 //            TextView animalText = (TextView) findViewById(buttonDesc.getResourceId(i, -1));
             //Så länge ranArray[ranNum] är satt till falskt dvs aldrig använts så gå in här
-            if(ranArray[ranNum] == false) {
+            if(!ranArray[ranNum]) {
                 //En av gångerna kommer siffran i loopen stämma överrens med siffran i ranSound, gör detta till vinnarknappen
                 if(i == ranSound) {
                     //Skapa vinnande ljudet & vinnande gå till nästa spel
@@ -145,6 +142,11 @@ public class PlayGameActivity extends ActionBarActivity {
 //                mp.start();
 //            }
 //        });
+        imgs.recycle();
+        buttonImgs.recycle();
+        buttonSound.recycle();
+        buttonDesc.recycle();
+        buttonTitle.recycle();
 
     }
 
