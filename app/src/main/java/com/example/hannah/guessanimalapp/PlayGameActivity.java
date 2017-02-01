@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +26,6 @@ public class PlayGameActivity extends AppCompatActivity {
     int counter;
     MediaPlayer mp = new MediaPlayer();
 
-//Hejsan Pontus
     //http://stackoverflow.com/questions/6945678/storing-r-drawable-ids-in-xml-array
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -123,30 +122,13 @@ public class PlayGameActivity extends AppCompatActivity {
         }
 
 
-//
-//        for(int i = 0; i < buttonImgs.length(); i++) {
-//            ImageButton img = (ImageButton) findViewById(buttonImgs.getResourceId(i, -1));
-//            img.setImageResource(imgs.getResourceId(i, -1));
-//            img.setId(imgs.getResourceId(i, -1));
-//        }
-
-//        image1.setImageResource(imgs.getResourceId(0, -1));
-//        image2.setImageResource(imgs.getResourceId(1, -1));
-//        image3.setImageResource(imgs.getResourceId(2, -1));
-//        image4.setImageResource(imgs.getResourceId(3, -1));
-
-//        final MediaPlayer mp = MediaPlayer.create(this, R.raw.catmeow);
-//        playButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                mp.start();
-//            }
-//        });
+        /* HÄR RECYCLEAR MAN ALLA ARRAYER WHEN? I DUNNO MEN DEN GNÄLLER FAN
         imgs.recycle();
         buttonImgs.recycle();
         buttonSound.recycle();
         buttonDesc.recycle();
         buttonTitle.recycle();
+        */
 
     }
 
