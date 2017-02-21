@@ -41,6 +41,7 @@
     <string name="sealion_desc">Ett sjölejon är ett djur</string>
     <string name="cat_desc">En katt är ett djur</string>
     <string name="next_game">Nästa spel!</string>
+    <string name="exit_game">Avsluta</string>
 
     <string name="elephant_title">Elefant</string>
     <string name="cow_title">Ko</string>

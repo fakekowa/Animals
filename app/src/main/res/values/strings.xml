@@ -39,6 +39,7 @@
     <string name="sealion_desc">A sea lion is an animal</string>
     <string name="cat_desc">A real cat is a real cat</string>
     <string name="next_game">Next Game!</string>
+    <string name="exit_game">Exit</string>
 
     <string name="elephant_title">Elephant</string>
     <string name="cow_title">Cow</string>
