@@ -3,7 +3,9 @@ package com.example.hannah.guessanimalapp;
 /**
  * Created by pontus on 2017-02-21.
  */
-
+// ASIDASIDAJ
+//ASJDHASJDHASJDHAS
+//ASUDHASUDHASUDHUAHDAUS
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
