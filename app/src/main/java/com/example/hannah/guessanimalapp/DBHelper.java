@@ -87,7 +87,7 @@ public class DBHelper extends SQLiteAssetHelper {
         } catch (SQLiteException e) {
 
             //database does't exist yet.
-            //TESTDATSHIT
+
         }
 
         if (checkDB != null) {
