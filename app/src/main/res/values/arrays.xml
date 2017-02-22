@@ -37,6 +37,16 @@
         <item>@string/cat_desc</item>
     </integer-array>
 
+
+    <integer-array name="random_imgs_medium">
+        <item>@mipmap/bat_real</item>
+        <item>@mipmap/duckyellow</item>
+        <item>@mipmap/owl</item>
+        <item>@mipmap/parrot</item>
+        <item>@mipmap/penguin</item>
+        <item>@mipmap/rooster</item>
+    </integer-array>
+
     <integer-array name="button_imgs">
         <item>@id/imageButton1</item>
         <item>@id/imageButton2</item>

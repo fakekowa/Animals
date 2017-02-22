@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hannah.guessanimalapp" >
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    package="com.example.hannah.guessanimalapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainMenu"
             android:configChanges="locale"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,35 +23,30 @@
         <activity
             android:name=".DialogWindow"
             android:configChanges="locale"
-            android:label="@string/title_activity_dialog_window" >
-        </activity>
+            android:label="@string/title_activity_dialog_window"></activity>
         <activity
             android:name=".SoundActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_sound"
-            android:theme="@style/Theme.Custom" >
-        </activity>
+            android:theme="@style/Theme.Custom"></activity>
         <activity
             android:name=".LangActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_lang"
-            android:theme="@style/Theme.Custom" >
-        </activity>
+            android:theme="@style/Theme.Custom"></activity>
         <activity
             android:name=".HelpActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_help"
-            android:theme="@style/Theme.Custom" >
-        </activity>
+            android:theme="@style/Theme.Custom"></activity>
         <activity
             android:name=".StartPlayActivity"
             android:configChanges="locale"
-            android:label="@string/title_activity_start_play" >
-        </activity>
+            android:label="@string/title_activity_start_play"></activity>
         <activity
             android:name=".PlayGameActivity"
-            android:label="@string/title_activity_play_game" >
-        </activity>
+            android:label="@string/title_activity_play_game"></activity>
+        <activity android:name=".MediumPlay"></activity>
     </application>
 
 </manifest>
