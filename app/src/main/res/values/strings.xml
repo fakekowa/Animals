@@ -47,5 +47,16 @@
     <string name="catmeow_title">Louise Cat</string>
     <string name="sealion_title">Sea lion</string>
     <string name="cat_title">Cat</string>
+    <string name="extras_button">Extras</string>
+    <string name="extras_text">Yarp this is extras</string>
+
+    <string-array name="Animals">
+        <item>Elephant</item>
+        <item>Cow</item>
+        <item>Lion</item>
+        <item>Louise</item>
+        <item>Sealion</item>
+        <item>Cat</item>
+    </string-array>
 
 </resources>

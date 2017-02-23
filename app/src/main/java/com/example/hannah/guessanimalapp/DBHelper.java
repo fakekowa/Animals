@@ -3,6 +3,7 @@ package com.example.hannah.guessanimalapp;
 /**
  * Created by pontus on 2017-02-21.
  */
+//Hejhej
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -16,6 +17,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBHelper extends SQLiteAssetHelper {
     private static final int DATABASE_VERSION = 1;
@@ -147,24 +150,32 @@ public class DBHelper extends SQLiteAssetHelper {
 
     }
 
-    public void insertAnimals(String name, int id)
+    public void insertAnimals(String name)
     {
         SQLiteDatabase mydataBase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("id", id);
+        //contentValues.put("id", id);
         contentValues.put("name", name);
         mydataBase.insert("animals", null, contentValues);
         mydataBase.close();
-
-
     }
 
-    public void getAnimals()
-    {
+    public List<String> getAnimals() {
+        List<String> animals = new ArrayList<>();
         SQLiteDatabase myDatabase = this.getReadableDatabase();
-        String query = "SELECT * from animals;";
+        String query = "SELECT name from animals;";
         Cursor c1 = myDatabase.rawQuery(query, null);
+        while (c1.moveToNext()) {
+            String animal = c1.getString(c1.getColumnIndex("name"));
+            animals.add(animal);
+        }
+        return animals;
+    }
 
+    public void cleanDB() {
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+        String query = "DELETE from animals;";
+        myDatabase.rawQuery(query, null);
     }
 
 }

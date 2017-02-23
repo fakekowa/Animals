@@ -1,35 +1,18 @@
 package com.example.hannah.guessanimalapp;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.ContextThemeWrapper;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.PopupMenu;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
-import android.support.v4.app.DialogFragment;
+import android.widget.ImageView;
 
 
 
@@ -59,7 +42,6 @@ public class MainMenu extends ActionBarActivity {
 
             @Override
             public void onClick(View view) {
-
 
                 PopupMenu pop = new PopupMenu(MainMenu.this, menuPop);
                 pop.getMenuInflater().inflate(R.menu.popup_menu, pop.getMenu());
@@ -136,6 +118,11 @@ public class MainMenu extends ActionBarActivity {
 
     public void toStart(View view) {
         Intent intent = new Intent(MainMenu.this, StartPlayActivity.class);
+        startActivity(intent);
+    }
+
+    public void toLib(View view) {
+        Intent intent = new Intent(MainMenu.this, LibActivity.class);
         startActivity(intent);
     }
 

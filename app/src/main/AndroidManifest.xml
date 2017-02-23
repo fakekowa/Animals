@@ -23,31 +23,38 @@
         <activity
             android:name=".DialogWindow"
             android:configChanges="locale"
-            android:label="@string/title_activity_dialog_window" />
+            android:label="@string/title_activity_dialog_window"></activity>
         <activity
             android:name=".SoundActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_sound"
-            android:theme="@style/Theme.Custom" />
+            android:theme="@style/Theme.Custom"></activity>
         <activity
             android:name=".LangActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_lang"
-            android:theme="@style/Theme.Custom" />
+            android:theme="@style/Theme.Custom"></activity>
         <activity
             android:name=".HelpActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_help"
-            android:theme="@style/Theme.Custom" />
+            android:theme="@style/Theme.Custom"></activity>
         <activity
             android:name=".StartPlayActivity"
             android:configChanges="locale"
-            android:label="@string/title_activity_start_play" />
+            android:label="@string/title_activity_start_play"></activity>
+        <activity
+            android:name=".LibActivity"
+            android:label="LibActivity"></activity>
         <activity
             android:name=".PlayGameActivity"
-            android:label="@string/title_activity_play_game" />
-        <activity android:name=".MediumPlay" />
-        <activity android:name=".ExtrasActivity"></activity>
+            android:label="@string/title_activity_play_game"></activity>
+        <activity
+            android:name=".ExtrasActivity"
+            android:label="@string/extras_text"></activity>
+        <activity
+            android:name=".MediumPlay"
+            android:label="@string/medium_play"></activity>
     </application>
 
 </manifest>

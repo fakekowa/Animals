@@ -48,12 +48,12 @@
     </integer-array>
 
     <integer-array name="random_sound_medium">
-        <item>@mipmap/bat</item>
-        <item>@mipmap/duck</item>
-        <item>@mipmap/owl</item>
-        <item>@mipmap/parrot</item>
-        <item>@mipmap/penguin</item>
-        <item>@mipmap/rooster</item>
+        <item>@raw/elephant</item>
+        <item>@raw/cow</item>
+        <item>@raw/lion</item>
+        <item>@raw/catmeow</item>
+        <item>@raw/sealion</item>
+        <item>@raw/cat</item>
     </integer-array>
 
     <integer-array name="button_imgs">

@@ -4,103 +4,86 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.database.SQLException;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
+
 public class MediumPlay extends AppCompatActivity {
-
-
-    Button playButton;
-    int ranNum;
-    //Experimental shitznitz 2017-01-30
-    int counter;
     MediaPlayer mp = new MediaPlayer();
 
-
+    //http://stackoverflow.com/questions/6945678/storing-r-drawable-ids-in-xml-array
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medium_play);
+        setContentView(R.layout.activity_play_game);
+
+        final DBHelper ourDBHelper = new DBHelper(this);
+
+        try {
+
+            ourDBHelper.createDataBase();
+
+        } catch (IOException ioe) {
+
+            throw new Error("Unable to create database");
+
+        }
+
+        try {
+
+            ourDBHelper.openDataBase();
+
+        } catch (SQLException sqle) {
+
+            throw sqle;
+
+        }
 
 
-        final Intent refresh = new Intent(this, MediumPlay.class);
-        playButton = (Button) findViewById(R.id.play_button);
+        Button playButton = (Button) findViewById(R.id.play_button);
 
-        TypedArray imgs = getResources().obtainTypedArray(R.array.random_imgs_medium);
-        TypedArray buttonImgs = getResources().obtainTypedArray(R.array.button_imgs);
-        TypedArray buttonSound = getResources().obtainTypedArray(R.array.random_sound_medium);
+        final TypedArray imgs = getResources().obtainTypedArray(R.array.random_imgs_medium);
 
-        //Hannah
+        final TypedArray buttonImgs = getResources().obtainTypedArray(R.array.button_imgs);
+
+        final TypedArray buttonSound = getResources().obtainTypedArray(R.array.random_sound_medium);
+
         final TypedArray buttonDesc = getResources().obtainTypedArray(R.array.random_text);
+
         final TypedArray buttonTitle = getResources().obtainTypedArray(R.array.random_title);
-        //        en boolean array lika lång som imgs arrayen för att undvika att randomisera samma position 2 ggr
+
         boolean[] ranArray = new boolean[imgs.length()];
-        //Random int mellan 0-4 som används en gång under forloopen för att tilldela en av knapparna ett ljud
-        int ranSound = ThreadLocalRandom.current().nextInt(0, 4);
-        //Experimental shitznitz 2017-01-30
-        counter = 0;
-        //Int som innehåller vilka djur som skapas, för att skicka till lib att låsa upp, skickas med intent
-        //Forloop för att skapa 4 knappar (buttonImgs.length är 4 alltid)
-        for(int i = 0; i < buttonImgs.length();) {
-            //int ranNum slumpar 0-längden av antalet djur och tilldelar djuret i ranNums position i arrayen till knappen
-            ranNum = ThreadLocalRandom.current().nextInt(0, imgs.length());
-            final int a = ranNum;
-            //Skapa en ny imagebutton objekt.
+
+        int winSound = ThreadLocalRandom.current().nextInt(0, 4);
+        for (int i = 0; i < buttonImgs.length(); ) {             //Create 4 buttons
+
+            int ranNum = ThreadLocalRandom.current().nextInt(0, imgs.length());
             ImageButton img = (ImageButton) findViewById(buttonImgs.getResourceId(i, -1));
-            //            TextView animalText = (TextView) findViewById(buttonDesc.getResourceId(i, -1));
-            //Så länge ranArray[ranNum] är satt till falskt dvs aldrig använts så gå in här
-            if(!ranArray[ranNum]) {
-                //En av gångerna kommer siffran i loopen stämma överrens med siffran i ranSound, gör detta till vinnarknappen
-                if(i == ranSound) {
-                    //Skapa vinnande ljudet & vinnande gå till nästa spel
-                    mp = MediaPlayer.create(this, buttonSound.getResourceId(ranNum, -1));
-                    img.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            //Experimental shitznitz 2017-01-30
-                            counter++;
-                            //på onClick skapas en dialog
-                            AlertDialog.Builder dialog = new AlertDialog.Builder(MediumPlay.this);
-                            //dialogen är möjlig att cancel-era
-                            dialog.setCancelable(true);
-                            //dialogen hämtar rätt rad i random_text array och sätter som meddelande i dialogen
-                            //int a är en referens till ranNum, att anv ranNum blir en random text så icke
-                            dialog.setMessage(buttonDesc.getResourceId(a, -1));
-                            //sätter titel på dialogfönstret
-                            dialog.setTitle(buttonTitle.getResourceId(a, -1));
-                            //sätter en positiv knapp, när den klickas refreshas aktiviteten - nytt spel
-                            //rätt språk av string hämtas
-                            dialog.setPositiveButton(getString(R.string.next_game), new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    finish();
-                                    startActivity(refresh);
-                                }
-                            });
-                            //Experimental shitznitz 2017-01-30
-                            if(counter == 3) {
-                                AlertDialog win = dialog.create();
-                                win.setTitle("Du har vunnit och låst upp nya djur i ditt bibliotek!");
-                                win.setMessage("Vill du fortsätta eller vill du sluta spela?");
-                                win.show();
-                                mp.start();
-                                mp.release();
-                                finish();
-                            }
-                            AlertDialog alert = dialog.create();
-                            alert.show();
-                            mp.start();
-                            mp.release();
-                        }
-                    });
+
+            //As long as ranArray[ranNum] is false, go into this.
+            if (!ranArray[ranNum]) {
+
+                img.setImageResource(imgs.getResourceId(ranNum, -1));
+                img.setId(imgs.getResourceId(ranNum, -1));
+                if (i == winSound) {
+
+                    ourDBHelper.insertAnimals(getString(imgs.getResourceId(ranNum, -1)));
+                    ourDBHelper.getAnimals();
+                    //ourDBHelper.cleanDB();
+                    playGame(buttonSound, ranNum, img, buttonDesc, buttonTitle);
                     playButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -110,23 +93,10 @@ public class MediumPlay extends AppCompatActivity {
 
                 }
                 i++;
-                //sätt bild och id på knappen till nuvarande djur
-                img.setImageResource(imgs.getResourceId(ranNum, -1));
-                img.setId(imgs.getResourceId(ranNum, -1));
             }
             //Gör nuvarande djurposition i arrayen till true så den inte används igen.
             ranArray[ranNum] = true;
         }
-
-
-            /* HÄR RECYCLEAR MAN ALLA ARRAYER WHEN? I DUNNO MEN DEN GNÄLLER FAN
-            imgs.recycle();
-            buttonImgs.recycle();
-            buttonSound.recycle();
-            buttonDesc.recycle();
-            buttonTitle.recycle();
-            */
-
     }
 
     @Override
@@ -151,4 +121,42 @@ public class MediumPlay extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void playGame(TypedArray buttonSound, final int ranNum, ImageButton img, final TypedArray buttonDesc, final TypedArray buttonTitle) {
+        final Intent refresh = new Intent(this, MediumPlay.class);
+        mp = MediaPlayer.create(this, buttonSound.getResourceId(ranNum, -1));
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Experimental shitznitz 2017-01-30
+                //på onClick skapas en dialog
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MediumPlay.this);
+                //dialogen är möjlig att cancel-era
+                dialog.setCancelable(true);
+                //dialogen hämtar rätt rad i random_text array och sätter som meddelande i dialogen
+                //int a är en referens till ranNum, att anv ranNum blir en random text så icke
+                dialog.setMessage(buttonDesc.getResourceId(ranNum, -1));
+                //sätter titel på dialogfönstret
+                dialog.setTitle(buttonTitle.getResourceId(ranNum, -1));
+                //sätter en positiv knapp, när den klickas refreshas aktiviteten - nytt spel
+                //rätt språk av string hämtas
+                dialog.setNegativeButton(getString(R.string.exit_game), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                });
+                dialog.setPositiveButton(getString(R.string.next_game), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                        startActivity(refresh);
+                    }
+                });
+                AlertDialog alert = dialog.create();
+                alert.show();
+                mp.start();
+                mp.release();
+            }
+        });
+    }
 }

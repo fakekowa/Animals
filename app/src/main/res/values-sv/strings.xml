@@ -49,5 +49,7 @@
     <string name="catmeow_title">Louise Katt</string>
     <string name="sealion_title">Sjölejon</string>
     <string name="cat_title">Katt</string>
+    <string name="extras_button">Extras</string>
+    <string name="extras_text">Ja detta är extras då</string>
 
 </resources>

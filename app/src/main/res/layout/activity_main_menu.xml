@@ -33,6 +33,7 @@
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:text="@string/menu_library"
+        android:onClick="toLib"
         android:background="@drawable/button_colors"
         android:id="@+id/library_button"
         style="?android:attr/borderlessButtonStyle"
