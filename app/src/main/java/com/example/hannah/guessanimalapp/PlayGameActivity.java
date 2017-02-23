@@ -1,29 +1,27 @@
- package com.example.hannah.guessanimalapp;
+package com.example.hannah.guessanimalapp;
 
- import android.app.AlertDialog;
-        import android.content.DialogInterface;
-        import android.content.Intent;
-        import android.content.res.TypedArray;
-        import android.database.SQLException;
-        import android.media.MediaPlayer;
-        import android.os.Build;
-        import android.os.Bundle;
-        import android.support.annotation.RequiresApi;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.Menu;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.ImageButton;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.TypedArray;
+import android.database.SQLException;
+import android.media.MediaPlayer;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
-        import java.io.IOException;
-        import java.util.concurrent.ThreadLocalRandom;
+import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class PlayGameActivity extends AppCompatActivity {
     MediaPlayer mp = new MediaPlayer();
-    int counter = 0;
-    int animalcounter = 0;
     //http://stackoverflow.com/questions/6945678/storing-r-drawable-ids-in-xml-array
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -56,13 +54,16 @@ public class PlayGameActivity extends AppCompatActivity {
 
 
         Button playButton = (Button) findViewById(R.id.play_button);
-        final Intent refresh = new Intent(this, PlayGameActivity.class);
-        TypedArray imgs = getResources().obtainTypedArray(R.array.random_imgs);
-        TypedArray buttonImgs = getResources().obtainTypedArray(R.array.button_imgs);
-        TypedArray buttonSound = getResources().obtainTypedArray(R.array.random_sound);
+
+        final TypedArray imgs = getResources().obtainTypedArray(R.array.random_imgs);
+
+        final TypedArray buttonImgs = getResources().obtainTypedArray(R.array.button_imgs);
+
+        final TypedArray buttonSound = getResources().obtainTypedArray(R.array.random_sound);
+
         final TypedArray buttonDesc = getResources().obtainTypedArray(R.array.random_text);
+
         final TypedArray buttonTitle = getResources().obtainTypedArray(R.array.random_title);
-        //        en boolean array lika lång som imgs arrayen för att undvika att randomisera samma position på djuret 2 ggr
 
         boolean[] ranArray = new boolean[imgs.length()];
 
@@ -116,7 +117,6 @@ public class PlayGameActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     public void winSound(TypedArray buttonSound, final int ranNum, ImageButton img, final TypedArray buttonDesc, final TypedArray buttonTitle) {
         final Intent refresh = new Intent(this, PlayGameActivity.class);
         mp = MediaPlayer.create(this, buttonSound.getResourceId(ranNum, -1));
@@ -156,5 +156,4 @@ public class PlayGameActivity extends AppCompatActivity {
 
         });
     }
-}
 }
