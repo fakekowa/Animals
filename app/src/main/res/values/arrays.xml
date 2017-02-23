@@ -39,8 +39,17 @@
 
 
     <integer-array name="random_imgs_medium">
-        <item>@mipmap/bat_real</item>
-        <item>@mipmap/duckyellow</item>
+        <item>@mipmap/bat</item>
+        <item>@mipmap/duck</item>
+        <item>@mipmap/owl</item>
+        <item>@mipmap/parrot</item>
+        <item>@mipmap/penguin</item>
+        <item>@mipmap/rooster</item>
+    </integer-array>
+
+    <integer-array name="random_sound_medium">
+        <item>@mipmap/bat</item>
+        <item>@mipmap/duck</item>
         <item>@mipmap/owl</item>
         <item>@mipmap/parrot</item>
         <item>@mipmap/penguin</item>

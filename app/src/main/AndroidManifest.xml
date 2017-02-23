@@ -23,30 +23,31 @@
         <activity
             android:name=".DialogWindow"
             android:configChanges="locale"
-            android:label="@string/title_activity_dialog_window"></activity>
+            android:label="@string/title_activity_dialog_window" />
         <activity
             android:name=".SoundActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_sound"
-            android:theme="@style/Theme.Custom"></activity>
+            android:theme="@style/Theme.Custom" />
         <activity
             android:name=".LangActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_lang"
-            android:theme="@style/Theme.Custom"></activity>
+            android:theme="@style/Theme.Custom" />
         <activity
             android:name=".HelpActivity"
             android:configChanges="locale"
             android:label="@string/title_activity_help"
-            android:theme="@style/Theme.Custom"></activity>
+            android:theme="@style/Theme.Custom" />
         <activity
             android:name=".StartPlayActivity"
             android:configChanges="locale"
-            android:label="@string/title_activity_start_play"></activity>
+            android:label="@string/title_activity_start_play" />
         <activity
             android:name=".PlayGameActivity"
-            android:label="@string/title_activity_play_game"></activity>
-        <activity android:name=".MediumPlay"></activity>
+            android:label="@string/title_activity_play_game" />
+        <activity android:name=".MediumPlay" />
+        <activity android:name=".ExtrasActivity"></activity>
     </application>
 
 </manifest>

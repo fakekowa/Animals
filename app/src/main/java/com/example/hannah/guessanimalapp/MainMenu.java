@@ -24,6 +24,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -36,6 +37,7 @@ public class MainMenu extends ActionBarActivity {
 
     ImageButton menuPop;
     Button extraButton, libraryButton, startButton;
+    ImageView imageLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class MainMenu extends ActionBarActivity {
         extraButton = (Button) findViewById(R.id.extras_button);
         libraryButton = (Button) findViewById(R.id.library_button);
         startButton = (Button) findViewById(R.id.start_button);
+        imageLogo = (ImageView) findViewById(R.id.imageView);
+        imageLogo.getLayoutParams().width = 270;
 
 
         //opens a popup menu when clicking the menu icon
@@ -55,6 +59,7 @@ public class MainMenu extends ActionBarActivity {
 
             @Override
             public void onClick(View view) {
+
 
                 PopupMenu pop = new PopupMenu(MainMenu.this, menuPop);
                 pop.getMenuInflater().inflate(R.menu.popup_menu, pop.getMenu());
@@ -131,6 +136,11 @@ public class MainMenu extends ActionBarActivity {
 
     public void toStart(View view) {
         Intent intent = new Intent(MainMenu.this, StartPlayActivity.class);
+        startActivity(intent);
+    }
+
+    public void extraClick(View view) {
+        Intent intent = new Intent(MainMenu.this, ExtrasActivity.class);
         startActivity(intent);
     }
 
