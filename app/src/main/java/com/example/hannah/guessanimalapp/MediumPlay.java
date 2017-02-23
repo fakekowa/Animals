@@ -36,7 +36,7 @@ public class MediumPlay extends AppCompatActivity {
 
         TypedArray imgs = getResources().obtainTypedArray(R.array.random_imgs_medium);
         TypedArray buttonImgs = getResources().obtainTypedArray(R.array.button_imgs);
-        TypedArray buttonSound = getResources().obtainTypedArray(R.array.random_sound);
+        TypedArray buttonSound = getResources().obtainTypedArray(R.array.random_sound_medium);
 
         //Hannah
         final TypedArray buttonDesc = getResources().obtainTypedArray(R.array.random_text);

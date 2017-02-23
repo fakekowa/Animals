@@ -72,7 +72,6 @@ public class StartPlayActivity extends ActionBarActivity {
                 String action = intent.getAction();
                 if (action.equals("finish_activity_play")) {
                     finish();
-                    // DO WHATEVER YOU WANT.
                 }
             }
         };
@@ -82,6 +81,16 @@ public class StartPlayActivity extends ActionBarActivity {
 
     public void easyPlay(View view) {
         Intent intent = new Intent(this, PlayGameActivity.class);
+        startActivity(intent);
+    }
+
+    public void mediumPlay(View view) {
+        Intent intent = new Intent(this, MediumPlay.class);
+        startActivity(intent);
+    }
+
+    public void advPlay(View view) {
+        Intent intent = new Intent(this, MediumPlay.class);
         startActivity(intent);
     }
 
