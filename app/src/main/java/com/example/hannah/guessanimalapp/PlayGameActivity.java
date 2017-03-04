@@ -79,9 +79,8 @@ public class PlayGameActivity extends AppCompatActivity {
                 img.setImageResource(imgs.getResourceId(ranNum, -1));
                 img.setId(imgs.getResourceId(ranNum, -1));
                 if (i == winSound) {
+                    ourDBHelper.insertAnimals(getString(buttonTitle.getResourceId(ranNum, -1)));
 
-                    ourDBHelper.insertAnimals(getString(imgs.getResourceId(ranNum, -1)));
-                    ourDBHelper.getAnimals();
                     //ourDBHelper.cleanDB();
                     playGame(buttonSound, ranNum, img, buttonDesc, buttonTitle);
                     playButton.setOnClickListener(new View.OnClickListener() {

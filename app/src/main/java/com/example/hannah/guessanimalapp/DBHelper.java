@@ -174,7 +174,7 @@ public class DBHelper extends SQLiteAssetHelper {
 
     public void cleanDB() {
         SQLiteDatabase myDatabase = this.getReadableDatabase();
-        String query = "DELETE from animals;";
+        String query = "DELETE name from animals;";
         myDatabase.rawQuery(query, null);
     }
 
