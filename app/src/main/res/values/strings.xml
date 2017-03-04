@@ -32,12 +32,16 @@
     <string name="title_activity_play_game">PlayGameActivity</string>
 
     <string name="play_sound_button">Play Sound!</string>
-    <string name="elephant_desc">An elephant is an animal</string>
-    <string name="cow_desc">A cow is an animal</string>
-    <string name="lion_desc">A lion is an animal</string>
+
+
+
+
+    <string name="elephant_desc">Elephants are large mammals that live in Africa and Asia. They often live in savannahs, deserts and forests. Elephants can live up to 70 years and weigh 7,000 kg.</string>
+    <string name="cow_desc">Cows are large ungulates. Cows live everywhere in the world and they can weigh up to 600 kg. There are several species.</string>
+    <string name="lion_desc">Lions are big cats that live in Africa and India. Lions live in prides in savannahs and forests. Lions can live up to 14 years.</string>
     <string name="catmeow_desc">A louise cat is an animal</string>
-    <string name="sealion_desc">A sea lion is an animal</string>
-    <string name="cat_desc">A real cat is a real cat</string>
+    <string name="sealion_desc">Sea lions are sea mammals that have a lifespan of 20-30 years. A female sea lion weigh 100 kg and a male sea lion weigh 300 kg. Sea lions are very cute.</string>
+    <string name="cat_desc">Cats live everywhere in the world. They can live up to 20 years. There are more than 70 species. Cats can be house cats or wildcats.</string>
     <string name="next_game">Next Game!</string>
     <string name="exit_game">Exit</string>
 

@@ -34,12 +34,17 @@
     <string name="hello_world">Hello world!</string>
 
     <string name="play_sound_button">Spela ljudet!</string>
-    <string name="elephant_desc">En elefant är ett djur</string>
-    <string name="cow_desc">En ko är ett djur</string>
-    <string name="lion_desc">Ett lejon är ett djur</string>
+
+
+
+    <string name="elephant_desc">Elefanter är stora snabeldjur som lever i Afrika och Asien. De lever oftast på savanner, öknar eller i skogar. Elefanter kan leva upp till 70 år och väga 7,000 kg.</string>
+    <string name="cow_desc">Kor är klövdjur av familjen oxdjur. Kor finns i hela världen och väger ungefär 600 kg. Det finns många olika raser hos djuret. </string>
+    <string name="lion_desc">Lejon är stora kattdjur som lever i Afrika och Indien. Lejon lever i flockar på savanner och i skogar. Lejon kan bli upp till 14 år gamla.</string>
     <string name="catmeow_desc">En louisekatt är ett djur</string>
-    <string name="sealion_desc">Ett sjölejon är ett djur</string>
-    <string name="cat_desc">En katt är ett djur</string>
+    <string name="sealion_desc">Sjölejon är av familjen rovdjur och lever i 20-30 år. En hona väger ungefär 100 kg och en hane väger 300 kg. Sjölejon är väldigt söta.</string>
+    <string name="cat_desc">Katter lever i hela världen och kan bli upp till 20 år. Det finns fler än 70 kattraser. Katter kan vara tama husdjur eller vilda.</string>
+
+
     <string name="next_game">Nästa spel!</string>
     <string name="exit_game">Avsluta</string>
 
