@@ -48,12 +48,31 @@
     </integer-array>
 
     <integer-array name="random_sound_medium">
-        <item>@raw/elephant</item>
-        <item>@raw/cow</item>
-        <item>@raw/lion</item>
-        <item>@raw/catmeow</item>
-        <item>@raw/sealion</item>
-        <item>@raw/cat</item>
+        <item>@raw/bat</item>
+        <item>@raw/duck</item>
+        <item>@raw/owl</item>
+        <item>@raw/parrot</item>
+        <item>@raw/penguin</item>
+        <item>@raw/rooster</item>
+    </integer-array>
+
+
+    <integer-array name="random_title_medium">
+        <item>@string/bat_title</item>
+        <item>@string/duck_title</item>
+        <item>@string/owl_title</item>
+        <item>@string/parrot_title</item>
+        <item>@string/penguin_title</item>
+        <item>@string/rooster_title</item>
+    </integer-array>
+
+    <integer-array name="random_text_medium">
+        <item>@string/bat_desc</item>
+        <item>@string/duck_desc</item>
+        <item>@string/owl_desc</item>
+        <item>@string/parrot_desc</item>
+        <item>@string/penguin_desc</item>
+        <item>@string/rooster_desc</item>
     </integer-array>
 
     <integer-array name="button_imgs">
