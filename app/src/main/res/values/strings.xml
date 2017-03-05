@@ -48,12 +48,12 @@
 
 
 
-    <string name="bat_desc">Bats are mammals that looks like flying mice. There are about 1,240 different species of bats. Bats live all around the world, except from cold places.</string>
-    <string name="duck_desc">Ducks are often aquatic birds. Ducks often have orange peckers and flat fins. There are several species all around the world.</string>
+    <string name="bat_desc">Bats are mammals that look like flying mice. There are about 1,240 different species of bats. Bats live all around the world, except from cold places.</string>
+    <string name="duck_desc">Ducks are aquatic birds. Ducks often have orange peckers and flat fins. There are several species all around the world.</string>
     <string name="owl_desc">Owls exist all over the world, except Antarctica and some remote islands. There are over 200 different species in the world.</string>
     <string name="parrot_desc">Parrots have 393 different species. Parrots live in tropical regions. Some parrots are able to talk.</string>
     <string name="penguin_desc">Penguins are aquatic flightless birds. They live in the Southern Hemisphere. Adult penguins weigh 35 kg and live up to 20 years.</string>
-    <string name="rooster_desc">A rooster is a male chicken that often crows "cock-a-doodle-doo". The rooster's comb is red. The rooster live everywhere in the world.</string>
+    <string name="rooster_desc">A rooster is a male chicken that often crows cock-a-doodle-doo! The rooster has a red comb. The rooster lives everywhere in the world.</string>
 
 
     <string name="elephant_title">Elephant</string>
