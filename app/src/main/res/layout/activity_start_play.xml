@@ -36,7 +36,7 @@
         android:onClick="mediumPlay"
         android:id="@+id/medium_button"
         android:layout_marginTop="50dp"
-        android:drawableTop="@drawable/last"
+        android:drawableTop="@drawable/olast"
         android:layout_below="@+id/easy_button"
         android:layout_centerHorizontal="true"
         android:background="@drawable/medium_button_style"/>
